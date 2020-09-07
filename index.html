@@ -1,0 +1,234 @@
+<html><head>
+    <meta charset="utf-8">
+    <title>扫雷游戏在线玩</title>
+	<meta name="keywords" content="经典扫雷，扫雷游戏，扫雷技巧，扫雷世界纪录">
+    <meta name="description" content="扫雷是一款大众类的益智小游戏，于1992年发行。游戏目标是在最短的时间内根据点击格子出现的数字找出所有非雷格子，同时避免踩雷，踩到一个雷即全盘皆输。">    
+    <link rel="Stylesheet" type="text/css" href="mine.css"></head>  
+  <body>
+    <div class="mine-wrap" style="display: block;">
+      <div class="title clearfix">
+        <div class="title-txt">扫雷</div>
+        <ul class="window-control">
+          <li class="window-min"></li>
+          <li class="window-max"></li>
+          <li class="window-close" onclick="window.close()"></li>
+        </ul>
+      </div>
+      <div class="mine-main clearfix">
+        <div class="mine-menu clearfix">
+          <ul class="mine-menu-ul clearfix">
+            <li class="menu-game">游戏
+              <ul class="menu-sub clearfix">
+                <li>
+                  <span class="menu-sub-left">
+                    <input type="radio" name="mine-type" value="0"></span>
+                  <span class="menu-sub-right">初级</span></li>
+                <li>
+                  <span class="menu-sub-left">
+                    <input type="radio" name="mine-type" value="1"></span>
+                  <span class="menu-sub-right">中级</span></li>
+                <li>
+                  <span class="menu-sub-left">
+                    <input type="radio" name="mine-type" value="2"></span>
+                  <span class="menu-sub-right">高级</span></li>
+                <li>
+                  <span class="menu-sub-left">
+                    <input type="radio" name="mine-type" value="3"></span>
+                  <span class="menu-sub-right">自定义</span></li>
+                <li>
+                  <span class="menu-sub-left">
+                    <input type="radio" name="mine-type" value="-1"></span>
+                  <span class="menu-sub-right">新版扫雷</span></li>
+                <li>
+                  <span class="menu-sub-left">
+                    <input type="radio" name="mine-type" value="-2"></span>
+                  <span class="menu-sub-right">教程</span></li>
+              </ul>
+            </li>
+			<li><a href="https://m.saolei.org.cn/" target="_blank">新扫雷</a></li>
+            <li><a href="https://www.wuziqi.org.cn/" target="_blank">五子棋</a></li>
+            <li><a href="https://www.heibaiqi.com.cn/" target="_blank">黑白棋</a></li>
+            <li><a href="https://www.tafang.org.cn/" target="_blank">塔防</a></li>			
+			<li><a href="https://www.tanchishe.com.cn/" target="_blank">贪吃蛇</a></li>
+			<li><a href="https://www.tuixiangzi.com.cn/" target="_blank">推箱子</a></li>
+			<li><a href="https://www.secha.net/" target="_blank">找色差</a></li>
+			<li><a href="https://www.2043.cn/" target="_blank">2043</a></li>
+			<li><a href="https://www.yibilian.cn/" target="_blank">一笔连</a></li>
+			<li><a href="https://www.hannuota.cn/" target="_blank">汉诺塔</a></li>			
+			<li><a href="https://www.chinesechess.com.cn/" target="_blank">象棋</a></li>			
+          </ul>
+        </div>
+        <div class="mine-con">
+          <div class="game-tags clearfix">
+            <div class="game-tag-images">
+              <img src="img/d0.gif">
+              <img src="img/d9.gif">
+              <img src="img/d9.gif"></div>
+            <div class="game-face">
+              <img src="img/face_normal.gif" onclick="mine1.init()" id="face"></div>
+            <div class="game-time-images">
+              <img src="img/d0.gif">
+              <img src="img/d0.gif">
+              <img src="img/d0.gif"></div>
+          </div>
+          <div class="mine-canvas">
+            <canvas id="mine1" width="480" height="256"></canvas>
+          </div>
+        </div>
+        <div class="mine-menu clearfix">
+          <ul class="mine-menu-ul clearfix"><!--<a href="https://www.saolei.org.cn" target="_blank"> 荣誉出品 saolei.org.cn</a>--><img alt="每日一言" src="https://www.meiriyiyan.com/api/v1/one.svg" style="max-width:100%; display: block; margin: 0 auto;"></ul>
+        </div>
+      </div>
+    </div>
+    <!-- 预加载图片资源 -->
+    <div class="load-images">
+      <img src="img/blank.gif">
+      <img src="img/0.gif">
+      <img src="img/flag.gif">
+      <img src="img/ask.gif">
+      <img src="img/mine.gif">
+      <img src="img/blood.gif">
+      <img src="img/error.gif">
+      <img src="img/0.gif">
+      <img src="img/1.gif">
+      <img src="img/2.gif">
+      <img src="img/3.gif">
+      <img src="img/4.gif">
+      <img src="img/5.gif">
+      <img src="img/6.gif">
+      <img src="img/7.gif">
+      <img src="img/8.gif"></div>
+    <div>
+      
+<p>扫雷游戏怎么玩：鼠标左键点击，右键进行标注。再次右键代表分析，注意右键可标注雷和问号。问号代表不确定。游戏左方数字代表雷数，右方数字代表时间。</p>
+
+	  
+    </div>	  
+    <div class="about">
+      <div>友情↓</div>
+       <a href="https://www.1wz.net/" target="_blank">第一文摘</a>	
+	   <a href="https://www.yiqing123.com/" target="_blank">疫情前线</a>
+	   <a href="https://www.654.cn/" target="_blank">654早上好</a>
+	   <a href="https://www.pinpaizhilu.com/" target="_blank">品牌之路</a>	   
+	   <a href="https://www.dayulu.com/" target="_blank">经典语录</a>	
+	   <a href="https://www.meirijinju.com/" target="_blank">每日金句</a>	   
+	   <a href="http://www.sdmz.net/" target="_blank">四大名著</a>
+	   <a href="http://www.lssdjt.com/" target="_blank">历史上的今天</a>
+	   <a href="https://youquhome.com/" target="_blank">有趣网址之家</a>	   
+	   <a href="https://www.gpwz.net/" target="_blank">股票网址大全</a>
+	   <a href="https://www.qinggongtu.cn/" target="_blank">清宫图</a>
+	   <a href="https://www.shilibiao.com.cn/" target="_blank">视力表</a>	   
+       <a href="https://www.lubanchi.org.cn/" target="_blank">鲁班尺吉数在线查询</a>
+	   <a href="https://www.laohuangli.org.cn/" target="_blank">老黄历</a>
+	   <a href="https://www.foli.org.cn/" target="_blank">佛历</a>
+	   <a href="https://www.zangli.org.cn/" target="_blank">藏历</a>
+	   <a href="https://www.ruler.org.cn/" target="_blank">在线尺子</a>
+	   <a href="https://www.chimabiao.cn/" target="_blank">尺码表</a>
+	   <a href="https://bjtime.org.cn/" target="_blank">北京标准时间</a>
+	   <a href="http://www.mingchu.net/" target="_blank">名厨网</a>
+	   <a href="http://www.qutonghua.com/" target="_blank">趣童话</a>
+	   <a href="https://www.tanke.org.cn/" target="_blank">坦克</a>
+	   <a href="http://www.klysw.com/" target="_blank">快乐养生</a>
+	   <a href="https://www.elsfk.cn/" target="_blank">俄罗斯方块</a>
+	   <a href="https://www.dadishu.com.cn/" target="_blank">打地鼠</a>
+	   <a href="https://www.chidouren.com.cn/" target="_blank">吃豆人</a>
+	   <a href="https://www.tanke.org.cn/" target="_blank">坦克</a>
+	   <a href="https://www.taluo.org.cn/" target="_blank">塔罗牌</a>
+    </div>
+	<script type="text/javascript" src="mine.js"></script>
+    <script>var mine1;
+      window.onload = function() {
+
+        document.getElementsByClassName('mine-wrap')[0].style.display = "block";
+
+        mine1 = new Mine("mine1", 'face', 30, 16, 99, "game-tag-images", "game-time-images");
+        mine1.init();
+
+        var inputEle = document.getElementsByTagName('input');
+
+        for (var i = 0; i < inputEle.length; i++) {
+          inputEle[i].onclick = function() {
+            var width, height, minenum;
+            
+			if (this.value == -2) {
+			  width = 9;
+              height = 9;
+              minenum = 10;
+			  window.location.href = "https://www.saolei.org.cn/jiaocheng.html";
+			} else if (this.value == -1) {
+			  width = 9;
+              height = 9;
+              minenum = 10;	
+			  window.location.href = "https://m.saolei.org.cn";
+			} else if (this.value == 0) {			
+              width = 9;
+              height = 9;
+              minenum = 10;
+            } else if (this.value == 1) {
+              width = 16;
+              height = 16;
+              minenum = 40;
+            } else if (this.value == 2) {
+              width = 30;
+              height = 16;
+              minenum = 99;
+            } else if (this.value == 3) {
+              width = prompt("请输入宽(9-30)");
+              height = width && prompt("请输入高(9-24)");
+              minenum = height && prompt("请输入雷的数量(10-200)");
+              if (! (width && height && minenum)) {
+                return;
+              }
+              if (width < 9) {
+                width = 9;
+              }
+              if (width > 30) {
+                width = 30;
+              }
+              if (height < 9) {
+                height = 9;
+              }
+              if (height > 24) {
+                height = 24;
+              }
+              if (minenum < 10) {
+                minenum = 10;
+              }
+              if (minenum > 200) {
+                minenum = 200;
+              }
+              if (minenum > height * width) {
+                minenum = 10;
+              }
+            }
+            mine1.paneheight = height; //有几行
+            mine1.panewidth = width; //有几列
+            mine1.minenum = minenum; //有几个雷
+            mine1.init();
+            document.getElementsByClassName("mine-wrap")[0].style.width = width * mine1.PANE_SIZE + 25 + "px";
+          }
+        };
+
+      }</script>
+    <script type="text/javascript">(function() {
+        var ua = navigator.userAgent.toLowerCase();
+        var bIsIpad = ua.match(/ipad/i) == "ipad";
+        var bIsIphoneOs = ua.match(/iphone os/i) == "iphone os";
+        var bIsAndroid = ua.match(/android/i) == "android";
+        var bIsWM = ua.match(/windows mobile/i) == "windows mobile";
+        if (bIsIpad || bIsIphoneOs || bIsAndroid || bIsWM) {
+          window.location.href = "https://m.saolei.org.cn/"
+        }
+      })();</script>
+	  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+	  <script type="text/javascript">
+	  /*<span id="meiriyiyan" style="font-size:14px;color:red;">获取中...</span>
+	  $.getJSON('https://www.meiriyiyan.com/api/v1/',function(data){	
+	     $("#meiriyiyan").html('<a href="'+data.url+'" target="_blank">每日一言:'+data.title+'</a>');
+	  });
+	  */
+	  </script>
+	  <div style="display:none;"><script type="text/javascript" src="https://s5.cnzz.com/z_stat.php?id=1275969233&amp;web_id=1275969233"></script><script src="https://c.cnzz.com/core.php?web_id=1275969233&amp;t=z" charset="utf-8" type="text/javascript"></script><a href="https://www.cnzz.com/stat/website.php?web_id=1275969233" target="_blank" title="站长统计">站长统计</a>
+  
+
+</div></body></html>
